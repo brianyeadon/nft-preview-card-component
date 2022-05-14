@@ -1,0 +1,240 @@
+/*** RESET (source: https://piccalil.li/blog/a-modern-css-reset/) ***/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+p {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*** CUSTOM PROPERTIES ***/
+:root {
+  /* Primary colors */
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  /* Neutral colors */
+  --clr-dark-blue-main: hsl(217, 54%, 11%);
+  --clr-dark-blue-card: hsl(216, 50%, 16%);
+  --clr-dark-blue-line: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+  /* Box shadow */
+  --box-shadow-card: hsla(0, 0%, 0%, 0.1);
+}
+
+/*** GLOBAL ***/
+body {
+  background-color: var(--clr-dark-blue-main);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 300;
+  line-height: 1.625rem; /* 26px */
+  color: var(--clr-soft-blue);
+  padding: 0 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** IMAGES ***/
+.card-header-image {
+  border-radius: 0.5rem;
+}
+
+.card-header-image-overlay {
+  display: block;
+  position: relative;
+  outline: none;
+}
+
+.card-header-image-overlay::before,
+.card-header-image-overlay::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.card-header-image-overlay::before {
+  --clr-cyan: hsl(178, 100%, 50%, 0.5);
+  background-color: var(--clr-cyan);
+  border-radius: 0.5rem;
+}
+
+.card-header-image-overlay::after {
+  background-image: url("../images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-100%);
+}
+
+.card-header-image-overlay:hover::before,
+.card-header-image-overlay:focus::before,
+.card-header-image-overlay:hover::after,
+.card-header-image-overlay:focus::after {
+  opacity: 1;
+}
+
+.ethereum-icon {
+  width: 0.6875rem; /* 11px */
+  height: 1.125rem; /* 18px */
+}
+
+.time-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.card-footer-icon {
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+
+  width: 2.0625rem; /* 33px */
+  height: 2.0625rem; /* 33px */
+}
+
+/*** TYPOGRAPHY ***/
+.card-body-heading {
+  font-size: 1.375rem; /* 22px */
+  font-weight: 600;
+  line-height: 1.75rem; /* 28px */
+  color: var(--clr-white);
+  margin: 1.5rem 0 0.75rem;
+  transition: color 0.3 ease-out;
+}
+
+.card-body-heading:hover,
+.card-body-heading:focus {
+  color: var(--clr-cyan);
+  cursor: pointer;
+}
+
+.card-body-text {
+}
+
+.ethereum-price,
+.time-text,
+.card-footer-text {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.1875rem; /* 19px */
+}
+
+.ethereum-price {
+  font-weight: 600;
+  color: var(--clr-cyan);
+  margin-left: 0.405rem; /* 6.48px */
+}
+
+.time-text {
+  font-weight: 400;
+  margin-left: 0.48rem; /* 7.7px */
+}
+
+.card-footer-text {
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+.accent-text {
+  color: var(--clr-white);
+}
+
+.accent-text:hover,
+.accent-text:focus {
+  color: var(--clr-cyan);
+  cursor: pointer;
+}
+
+/*** LAYOUT ***/
+.container {
+  background-color: var(--clr-dark-blue-card);
+  border-radius: 0.9375rem;
+  padding: 1.5rem;
+  max-width: 20.4375rem; /* 327px */
+  box-shadow: 0 1.5625rem 3.125rem 0 var(--box-shadow-card);
+}
+
+.card-body {
+  border-bottom: 1px solid var(--clr-dark-blue-line);
+}
+
+.card-body-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.ethereum,
+.time,
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.card-footer {
+  margin-top: 1rem;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 31.25rem) {
+  /* Typography */
+  .card-body-heading {
+    margin-bottom: 1rem;
+  }
+  .ethereum-price,
+  .time-text,
+  .card-footer-text {
+    font-size: 1rem;
+    line-height: 1.25rem; /* 20px */
+  }
+
+  /* Layout */
+  .container {
+    padding-bottom: 2rem;
+    max-width: 21.875rem; /* 350px */
+  }
+  .card-body-info {
+    margin: 1.5rem 0;
+  }
+}

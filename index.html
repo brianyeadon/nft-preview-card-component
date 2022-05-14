@@ -4,9 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Challenge-Title</title>
-    <!-- Link to Google Fonts -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | NFT preview card component</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <!-- <div class="card-header"> -->
+      <a
+        href="#"
+        class="card-header-image-overlay"
+        aria-label="interactive overlay for Equilibrium image"
+      >
+        <img
+          src="./images/image-equilibrium.jpg"
+          alt=""
+          class="card-header-image"
+        />
+      </a>
+      <!-- </div> -->
+
+      <div class="card-body">
+        <h1 class="card-body-heading">Equilibrium #3429</h1>
+        <p class="card-body-text">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="card-body-info">
+          <div class="ethereum">
+            <img
+              src="./images/icon-ethereum.svg"
+              alt=""
+              class="ethereum-icon"
+            />
+            <p class="ethereum-price">0.041 ETH</p>
+          </div>
+          <div class="time">
+            <img src="./images/icon-clock.svg" alt="" class="time-icon" />
+            <p class="time-text">3 days left</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <img src="./images/image-avatar.png" alt="" class="card-footer-icon" />
+        <p class="card-footer-text">
+          Creation of <span class="accent-text">Jules Wyvern</span>
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
