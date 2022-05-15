@@ -29,7 +29,6 @@ Users should be able to:
 ### Screenshot
 
 ![screenshot of my desktop solution to NFT preview card component solution](./screenshots/screenshot-desktop.png)
-![screenshot of my mobile solution to NFT preview card component solution](./screenshots/screenshot-mobile.png)
 
 ### Links
 
