@@ -84,6 +84,7 @@ body {
   display: block;
   position: relative;
   outline: none;
+  margin-bottom: 1.5rem;
 }
 
 .card-header-image-overlay::before,
@@ -117,13 +118,11 @@ body {
 }
 
 .ethereum-icon {
-  /* width: 0.6875rem;  */
   height: 1.125rem; /* 18px */
   object-fit: contain;
 }
 
 .time-icon {
-  /* width: 1rem; */
   height: 1rem;
   object-fit: contain;
 }
@@ -131,7 +130,6 @@ body {
 .card-footer-icon {
   border: 1px solid var(--clr-white);
   border-radius: 50%;
-  /* width: 2.0625rem;  */
   height: 2.0625rem; /* 33px */
   object-fit: contain;
 }
@@ -142,7 +140,7 @@ body {
   font-weight: 600;
   line-height: 1.75rem; /* 28px */
   color: var(--clr-white);
-  margin: 1.5rem 0 0.75rem;
+  margin-bottom: 0.75rem;
   transition: color 0.3 ease-out;
 }
 
@@ -153,6 +151,7 @@ body {
 }
 
 .card-body-text {
+  margin-bottom: 1rem;
 }
 
 .ethereum-price,
@@ -199,12 +198,13 @@ body {
 
 .card-body {
   border-bottom: 1px solid var(--clr-dark-blue-line);
+  margin-bottom: 1rem;
 }
 
 .card-body-info {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .ethereum,
@@ -214,29 +214,27 @@ body {
   align-items: center;
 }
 
-.card-footer {
-  margin-top: 1rem;
-}
-
 /*** MEDIA QUERIES ***/
 @media (min-width: 31.25rem) {
   /* Typography */
   .card-body-heading {
     margin-bottom: 1rem;
   }
+  .card-body-text {
+    margin-bottom: 1.5rem;
+  }
   .ethereum-price,
   .time-text,
   .card-footer-text {
     font-size: 1rem;
-    line-height: 1.25rem; /* 20px */
+    line-height: 1.25rem;
   }
-
   /* Layout */
   .container {
     padding-bottom: 2rem;
     max-width: 21.875rem; /* 350px */
   }
   .card-body-info {
-    margin: 1.5rem 0;
+    margin-bottom: 1.5rem;
   }
 }
