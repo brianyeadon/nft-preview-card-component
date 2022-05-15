@@ -47,11 +47,11 @@ Build out for mobile first, account for desktop through media queries, and add t
 
 ### What I learned
 
-How to apply an interactive overlay to an image with ::before and ::after pseudo elements in combination with :hover and :focus pseudo classes.
+How to apply an interactive overlay to an image with ::before and ::after pseudo-elements in combination with :hover and :focus pseudo-classes.
 
 ### Continued development
 
-After experimenting with overlays I plan to learn more about how to make use of ::before and ::after as well as the :focus-visible pseudo class.
+After experimenting with overlays I plan to learn more about how to make use of ::before and ::after pseudo-elements as well as the :focus-visible pseudo-class.
 
 ## Author
 
